@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+rm backup.sql
+mysqldump wordpress > backup.sql
+git add -A
+git commit -m "$1"
+git push origin master
+
