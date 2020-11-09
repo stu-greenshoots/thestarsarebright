@@ -31,7 +31,7 @@ UNDO|UNHEX|UNION|UNLOCK|UNSIGNED|UPDATE|UPDATEXML|USAGE|USING|UTC_DATE|UTC_TIME|
 VALUES|VARBINARY|VARCHAR|VARCHARACTER|VARYING|WHEN|WHERE|WHILE|WRITE|YEAR_MONTH|ZEROFILL)(?=[^\\w]|$)/ix');
 $this->variables['xssRegex'] = new wfWAFRuleVariable($this, 'xssRegex', '/(?:
 #tags
-(?:\\<|\\+ADw\\-|\\xC2\\xBC)(script|iframe|svg|object|embed|applet|link|style|meta|\\/\\/|\\?xml\\-stylesheet)(?:[^\\w]|\\xC2\\xBE)|
+(?:\\<|\\+ADw\\-|\\xC2\\xBC)(script|iframe|svg|object|embed|applet|link|style|meta|base|\\/\\/|\\?xml\\-stylesheet)(?:[^\\w]|\\xC2\\xBE)|
 #protocols
 (?:^|[^\\w])(?:(?:(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:6a|4a)|0*(?:106|74));?|j)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:61|41)|0*(?:97|65));?|a)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:76|56)|0*(?:118|86));?|v)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:61|41)|0*(?:97|65));?|a)|(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:76|56)|0*(?:118|86));?|v)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:62|42)|0*(?:98|66));?|b)|(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:65|45)|0*(?:101|69));?|e)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:63|43)|0*(?:99|67));?|c)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:6d|4d)|0*(?:109|77));?|m)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:61|41)|0*(?:97|65));?|a)|(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:6c|4c)|0*(?:108|76));?|l)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:69|49)|0*(?:105|73));?|i)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:76|56)|0*(?:118|86));?|v)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:65|45)|0*(?:101|69));?|e))(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:73|53)|0*(?:115|83));?|s)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:63|43)|0*(?:99|67));?|c)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:72|52)|0*(?:114|82));?|r)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:69|49)|0*(?:105|73));?|i)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:70|50)|0*(?:112|80));?|p)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:74|54)|0*(?:116|84));?|t)|(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:6d|4d)|0*(?:109|77));?|m)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:68|48)|0*(?:104|72));?|h)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:74|54)|0*(?:116|84));?|t)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:6d|4d)|0*(?:109|77));?|m)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:6c|4c)|0*(?:108|76));?|l)|(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:6d|4d)|0*(?:109|77));?|m)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:6f|4f)|0*(?:111|79));?|o)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:63|43)|0*(?:99|67));?|c)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:68|48)|0*(?:104|72));?|h)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:61|41)|0*(?:97|65));?|a)|(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:64|44)|0*(?:100|68));?|d)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:61|41)|0*(?:97|65));?|a)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:74|54)|0*(?:116|84));?|t)(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*(?:61|41)|0*(?:97|65));?|a)(?!(?:&\\#(?:x0*3a|0*58);?|&colon;?|\\:)(?:&\\#(?:x0*(?:69|49)|0*(?:105|73));?|i)(?:&\\#(?:x0*(?:6d|4d)|0*(?:109|77));?|m)(?:&\\#(?:x0*(?:61|41)|0*(?:97|65));?|a)(?:&\\#(?:x0*(?:67|47)|0*(?:103|71));?|g)(?:&\\#(?:x0*(?:65|45)|0*(?:101|69));?|e)(?:&\\#(?:x0*2f|0*47);?|\\/)(?:(?:&\\#(?:x0*(?:70|50)|0*(?:112|80));?|p)(?:&\\#(?:x0*(?:6e|4e)|0*(?:110|78));?|n)(?:&\\#(?:x0*(?:67|47)|0*(?:103|71));?|g)|(?:&\\#(?:x0*(?:62|42)|0*(?:98|66));?|b)(?:&\\#(?:x0*(?:6d|4d)|0*(?:109|77));?|m)(?:&\\#(?:x0*(?:70|50)|0*(?:112|80));?|p)|(?:&\\#(?:x0*(?:67|47)|0*(?:103|71));?|g)(?:&\\#(?:x0*(?:69|49)|0*(?:105|73));?|i)(?:&\\#(?:x0*(?:66|46)|0*(?:102|70));?|f)|(?:&\\#(?:x0*(?:70|50)|0*(?:112|80));?|p)?(?:&\\#(?:x0*(?:6a|4a)|0*(?:106|74));?|j)(?:&\\#(?:x0*(?:70|50)|0*(?:112|80));?|p)(?:&\\#(?:x0*(?:65|45)|0*(?:101|69));?|e)(?:&\\#(?:x0*(?:67|47)|0*(?:103|71));?|g)|(?:&\\#(?:x0*(?:74|54)|0*(?:116|84));?|t)(?:&\\#(?:x0*(?:69|49)|0*(?:105|73));?|i)(?:&\\#(?:x0*(?:66|46)|0*(?:102|70));?|f)(?:&\\#(?:x0*(?:66|46)|0*(?:102|70));?|f)|(?:&\\#(?:x0*(?:73|53)|0*(?:115|83));?|s)(?:&\\#(?:x0*(?:76|56)|0*(?:118|86));?|v)(?:&\\#(?:x0*(?:67|47)|0*(?:103|71));?|g)(?:&\\#(?:x0*2b|0*43);?|\\+)(?:&\\#(?:x0*(?:78|58)|0*(?:120|88));?|x)(?:&\\#(?:x0*(?:6d|4d)|0*(?:109|77));?|m)(?:&\\#(?:x0*(?:6c|4c)|0*(?:108|76));?|l))(?:(?:&\\#(?:x0*3b|0*59);?|;)(?:&\\#(?:x0*(?:63|43)|0*(?:99|67));?|c)(?:&\\#(?:x0*(?:68|48)|0*(?:104|72));?|h)(?:&\\#(?:x0*(?:61|41)|0*(?:97|65));?|a)(?:&\\#(?:x0*(?:72|52)|0*(?:114|82));?|r)(?:&\\#(?:x0*(?:73|53)|0*(?:115|83));?|s)(?:&\\#(?:x0*(?:65|45)|0*(?:101|69));?|e)(?:&\\#(?:x0*(?:74|54)|0*(?:116|84));?|t)(?:&\\#(?:x0*3d|0*61);?|=)[\\-a-z0-9]+)?(?:(?:&\\#(?:x0*3b|0*59);?|;)(?:&\\#(?:x0*(?:62|42)|0*(?:98|66));?|b)(?:&\\#(?:x0*(?:61|41)|0*(?:97|65));?|a)(?:&\\#(?:x0*(?:73|53)|0*(?:115|83));?|s)(?:&\\#(?:x0*(?:65|45)|0*(?:101|69));?|e)(?:&\\#(?:x0*36|0*54);?|6)(?:&\\#(?:x0*34|0*52);?|4))?(?:&\\#(?:x0*2c|0*44);?|,)))(?:\\s|(?:&\\#(?:x0*(?:9|a|d)|0*(?:9|10|13));?|&Tab;?|&NewLine;?))*(?:&\\#(?:x0*3a|0*58);?|&colon|\\:)|
 #css expression
@@ -145,6 +145,24 @@ $this->whitelistedParams['request.body[dir]'][] = '/\\/wp-admin\\/admin-ajax\\.p
 $this->whitelistedParams['request.body[sql_query]'][] = '/(?:lint|import)\\.php$/i';
 $this->whitelistedParams['request.body[divi_integration_body]'][] = '/\\/wp-admin\\/admin-ajax\\.php$/i';
 $this->whitelistedParams['request.body[divi_integration_head]'][] = '/\\/wp-admin\\/admin-ajax\\.php$/i';
+$this->whitelistedParams['request.body[modules]'][] = array(
+'url' => '/\\/wp-admin\\/admin-ajax\\.php$/i',
+'rules' => array (
+  0 => '3',
+  1 => '9',
+),
+'conditional' => new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'equals', 'et_fb_get_shortcode_from_fb_object', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'equals', 'et_fb_ajax_save', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'currentUserIs', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'currentUserIs', 'editor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))))))
+);
 $this->whitelistedParams['request.body[fl_builder_data][settings][html]'][] = array(
 'url' => '/.*/',
 'rules' => array (
@@ -235,6 +253,12 @@ $this->rules[18] = wfWAFRule::create($this, 18, NULL, 'priv-esc', '100', 'User R
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/(network/)?(profile|user-new)\\.php#i', array(wfWAFRuleComparisonSubject::create($this, 'request.path', array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
 ))))));
+$this->rules[272] = wfWAFRule::create($this, 272, NULL, 'auth-bypass', '100', 'WAF-RULE-272', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '122e966f883480ce46bc8e69ee9c6034',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
 $this->rules[66] = wfWAFRule::create($this, 66, NULL, 'dos', '100', 'WordPress Core <= 4.5.3 - DoS', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'update-plugin', array(wfWAFRuleComparisonSubject::create($this, array (
   0 => 'request.body',
@@ -248,6 +272,21 @@ wfWAFRuleComparisonSubject::create($this, array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '/(^|\\/|\\\\|%2f|%5c)\\.\\.(\\\\|\\/|%2f|%5c)/i', array(wfWAFRuleComparisonSubject::create($this, 'request.body', array (
 )),
 wfWAFRuleComparisonSubject::create($this, 'request.queryString', array (
+))))));
+$this->rules[286] = wfWAFRule::create($this, 286, NULL, 'auth-bypass', '100', 'Arbitrary Plugin deactivation in multiple themes including Activello <=1.4.0', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'equals', 'deactivate_plugin', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'equals', 'activate_plugin', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'plugin',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
 ))))));
 $this->rules[117] = wfWAFRule::create($this, 117, NULL, 'privesc', '100', 'WordPress Core: Arbitrary File Deletion', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/(network/)?post\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'editattachment', array(wfWAFRuleComparisonSubject::create($this, array (
@@ -267,6 +306,28 @@ wfWAFRuleComparisonSubject::create($this, array (
 ), array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
 ))))));
+$this->rules[263] = wfWAFRule::create($this, 263, NULL, 'xss', '100', 'All in One SEO Pack <= 3.6.1 Contributor+ Stored XSS', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/post\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', new wfWAFRuleVariable($this, 'xssRegex', NULL), array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'aiosp_title',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'aiosp_title',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'match', new wfWAFRuleVariable($this, 'xssRegex', NULL), array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'aiosp_description',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'aiosp_description',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'editor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
 $this->rules[126] = wfWAFRule::create($this, 126, NULL, 'privesc', '100', 'WordPress <= 5.0 - PHP Object Injection via Meta Data & Authenticated File Delete', 1, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp-admin/(network/)?post\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array (
   0 => 'request.body',
@@ -281,6 +342,28 @@ $this->rules[126] = wfWAFRule::create($this, 126, NULL, 'privesc', '100', 'WordP
   1 => 'guid',
 ), array (
 ))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[268] = wfWAFRule::create($this, 268, NULL, 'xss', '100', 'WAF-RULE-268', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/post\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'md5Equals', '58031e3297dea8f8016062d61d8fa8d0', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '/vc_raw_html|vc_raw_js|custom_onclick_code/', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '9a0364b9e99bb480dd25e1f0284c8555',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '9a0364b9e99bb480dd25e1f0284c8555',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'editor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
 ))))));
 $this->rules[1] = wfWAFRule::create($this, 1, NULL, 'whitelist', '100', 'Whitelisted URL', 1, 'allow', new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/(network/)?(post|profile|user-new|settings)\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
 ))))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
@@ -1816,12 +1899,13 @@ wfWAFRuleComparisonSubject::create($this, 'request.queryString', array (
 $this->rules[3] = wfWAFRule::create($this, 3, NULL, 'sqli', '40', 'SQL Injection', 1, 'failSQLi', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'matchCount', new wfWAFRuleVariable($this, 'sqliRegex', NULL), array(wfWAFRuleComparisonSubject::create($this, 'request.body', array (
 )),
 wfWAFRuleComparisonSubject::create($this, 'request.queryString', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
 ))))));
 $this->rules[9] = wfWAFRule::create($this, 9, NULL, 'xss', '100', 'XSS: Cross Site Scripting', 1, 'failXSS', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'matchCount', new wfWAFRuleVariable($this, 'xssRegex', NULL), array(wfWAFRuleComparisonSubject::create($this, 'request.body', array (
 )),
 wfWAFRuleComparisonSubject::create($this, 'request.queryString', array (
 ))))));
-$this->rules[11] = wfWAFRule::create($this, 11, NULL, 'file_upload', '100', 'Malicious File Upload', 1, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '/\\.(p(h(p|tml)[0-9]?|l|y)|(j|a)sp|aspx|sh|shtml|html?|cgi|htaccess|user\\.ini)($|\\.)/i', array(wfWAFRuleComparisonSubject::create($this, 'request.fileNames', array (
+$this->rules[11] = wfWAFRule::create($this, 11, NULL, 'file_upload', '100', 'Malicious File Upload', 1, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '/\\.(p(h(pt?|t(ml?)?|ar)[0-9]?|l|y)|(j|a)sp|aspx|sh|shtml|html?|cgi|htaccess|user\\.ini)($|\\.)/i', array(wfWAFRuleComparisonSubject::create($this, 'request.fileNames', array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
 ))))));
 $this->rules[67] = wfWAFRule::create($this, 67, NULL, 'lfi', '100', 'Directory Traversal - wp-config.php', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '/(^|\\/|\\\\)(\\.\\.?(\\\\|\\/)+)+wp\\-config\\.php/i', array(wfWAFRuleComparisonSubject::create($this, 'request.body', array (
@@ -2216,33 +2300,33 @@ wfWAFRuleComparisonSubject::create($this, array (
 ), array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
 ))))));
-$this->rules[181] = wfWAFRule::create($this, 181, NULL, 'sqli', '40', 'WAF-RULE-181', 0, 'fail', new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'md5Equals', '7cef8a734855777c2a9d0caf42666e69', array(wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5QueryString',
-  1 => '12470fe406d44017d96eab37dd65fc14',
+$this->rules[181] = wfWAFRule::create($this, 181, NULL, 'sqli', '40', 'Email Subscribers & Newsletters <= 4.2.1 - Blind SQL Injection in INSERT statement', 0, 'fail', new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'equals', 'open', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'es',
 ), array (
 )),
 wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5Body',
-  1 => '12470fe406d44017d96eab37dd65fc14',
+  0 => 'request.body',
+  1 => 'es',
 ), array (
-)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '467bf20fa851db25bb2fefe3328a1947', array(wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5QueryString',
-  1 => '12470fe406d44017d96eab37dd65fc14',
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'equals', 'viewstatus', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'es',
 ), array (
 )),
 wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5Body',
-  1 => '12470fe406d44017d96eab37dd65fc14',
+  0 => 'request.body',
+  1 => 'es',
 ), array (
 ))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'matchCount', new wfWAFRuleVariable($this, 'sqliRegex', NULL), array(wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5Body',
-  1 => '0800fc577294c34e0b28ad2839435945',
+  0 => 'request.body',
+  1 => 'hash',
 ), array (
   0 => 'base64decode',
 )),
 wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5QueryString',
-  1 => '0800fc577294c34e0b28ad2839435945',
+  0 => 'request.queryString',
+  1 => 'hash',
 ), array (
   0 => 'base64decode',
 ))))));
@@ -2451,17 +2535,18 @@ wfWAFRuleComparisonSubject::create($this, array (
 ), array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
 ))))));
-$this->rules[196] = wfWAFRule::create($this, 196, NULL, 'auth-bypass', '100', 'WAF-RULE-196', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
-)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'md5Equals', 'b3c09c3a82d910f5fa0592c6b0f0f34f', array(wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5QueryString',
-  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+$this->rules[196] = wfWAFRule::create($this, 196, NULL, 'auth-bypass', '100', 'Data Tables Generator by Supsystic <= 1.9.86 Unprotected AJAX to Stored XSS and Setting Modification', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'supsystic-tables', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
 ), array (
 )),
 wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5Body',
-  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+  0 => 'request.body',
+  1 => 'action',
 ), array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'editor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
 ))))));
 $this->rules[197] = wfWAFRule::create($this, 197, NULL, 'xss', '100', 'WAF-RULE-197', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'md5Equals', 'b3c09c3a82d910f5fa0592c6b0f0f34f', array(wfWAFRuleComparisonSubject::create($this, array (
@@ -2475,23 +2560,23 @@ wfWAFRuleComparisonSubject::create($this, array (
 ), array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'contains', '%253C', array(wfWAFRuleComparisonSubject::create($this, 'request.rawBody', array (
 ))))));
-$this->rules[198] = wfWAFRule::create($this, 198, NULL, 'rce', '100', 'WAF-RULE-198', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'md5Equals', '6a8a5380b88c4af6cf91cf294a2183d8', array(wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5Body',
-  1 => '93473a7344419b15c4219cc2b6c64c6f',
+$this->rules[198] = wfWAFRule::create($this, 198, NULL, 'rce', '100', 'Code Snippets <= 2.13.3 CSRF to RCE & XSS', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'equals', 'code-snippets', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'import',
 ), array (
 )),
 wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5QueryString',
-  1 => '93473a7344419b15c4219cc2b6c64c6f',
+  0 => 'request.queryString',
+  1 => 'import',
 ), array (
-)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '64e2dc7a4d1b6bd1555eadc87e90c689', array(wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5Body',
-  1 => '71860c77c6745379b0d44304d66b6a13',
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'equals', 'import-snippets', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'page',
 ), array (
 )),
 wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5QueryString',
-  1 => '71860c77c6745379b0d44304d66b6a13',
+  0 => 'request.queryString',
+  1 => 'page',
 ), array (
 ))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array (
   0 => 'request.files',
@@ -4177,15 +4262,15 @@ wfWAFRuleComparisonSubject::create($this, array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'contributor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'editor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
 ))))));
-$this->rules[244] = wfWAFRule::create($this, 244, NULL, 'file_upload', '100', 'WAF-RULE-244', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
-)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'md5Equals', '1e17970e966da0ba165c221c1150c9a2', array(wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5QueryString',
-  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+$this->rules[244] = wfWAFRule::create($this, 244, NULL, 'file_upload', '100', 'Elementor Pro => 2.9.3 Arbitrary File Upload', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'elementor_ajax', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
 ), array (
 )),
 wfWAFRuleComparisonSubject::create($this, array (
-  0 => 'request.md5Body',
-  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+  0 => 'request.body',
+  1 => 'action',
 ), array (
 )))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array (
   0 => 'request.files',
@@ -4305,4 +4390,705 @@ wfWAFRuleComparisonSubject::create($this, array (
   1 => '2e042b5db1ab08351fdc15ce17a3361a',
 ), array (
 )))))));
+$this->rules[252] = wfWAFRule::create($this, 252, NULL, 'file_upload', '100', 'WAF-RULE-252', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'md5Equals', '75328881430f08813e8680e146523a90', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '30e1548b67c0b8645fc6f2ddab7e7b99', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '/\\.(p(h(p|tml)[0-9]?|l|y)|(j|a)sp|aspx|sh|shtml|html?|cgi|htaccess|user\\.ini)($|\\.)/i', array(wfWAFRuleComparisonSubject::create($this, 'request.fileNames', array (
+))))));
+$this->rules[253] = wfWAFRule::create($this, 253, NULL, 'file_download', '100', 'WAF-RULE-253', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-post\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'md5Equals', 'a0d247a9e6058678af9cb1b75155097a', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '162f690b37f07850951c7a3cef949b6d', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '6c16d9a9fe7d620c0fbe3611ffb57f22', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[254] = wfWAFRule::create($this, 254, NULL, 'bypass', '100', 'WAF-RULE-254', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'md5Equals', '6d747ff214d197629f5db75a3b13b34b', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[255] = wfWAFRule::create($this, 255, NULL, 'auth-bypass', '100', 'Brizy Page Builder < 1.0.126  Improper Access Controls on AJAX Calls', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '/brizy(\\-|_)(?!(timestamp|submit_form))/', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'contributor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'author', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'editor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[256] = wfWAFRule::create($this, 256, NULL, 'auth-bypass', '100', 'Brizy Page Builder < 1.0.126 Improper Access Controls on AJAX Calls', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '/brizy_(add_rules|add_rule|update_rules|delete_rule|list_rules|rule_list_view|rule_group_list|rule_posts_group_list)/', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[257] = wfWAFRule::create($this, 257, NULL, 'xss', '100', 'WAF-RULE-257', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'f5f5677bb464b7a9d27c9bc4601b02f7',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '6b2f27ea23cbc62ad6e0d211a57e64e2',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[258] = wfWAFRule::create($this, 258, NULL, 'auth-bypass', '100', 'KingComposer < 2.9.4 Multiple vulnerabilities', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#kc_(?:update_option|installed_extensions)#', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#(?:nopriv_)?kc_(?:push_section|install_online_preset)#', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'editor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'author', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'contributor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))))));
+$this->rules[260] = wfWAFRule::create($this, 260, NULL, 'file_upload', '100', 'WAF-RULE-260', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'md5Equals', '7ea49baf7ff31da636a3f5477a940eee', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', 'e1e50512d4b53d7c29d8c1f42973de40', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[261] = wfWAFRule::create($this, 261, NULL, 'backdoor', '100', 'WAF-RULE-261', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'md5Equals', 'b8514b20da5ed83c563cb93c63b9b630', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => 'c41359df90b8d4c0a69449661ee4fa41',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'c41359df90b8d4c0a69449661ee4fa41',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => 'fb216d9e8791e63c8d12bdc420956839',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'fb216d9e8791e63c8d12bdc420956839',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[264] = wfWAFRule::create($this, 264, NULL, 'xss', '100', 'Newsletter <= 6.7.9 Reflected XSS', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'tnpc_render', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', new wfWAFRuleVariable($this, 'xssRegex', NULL), array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'encoded_options',
+), array (
+  0 => 'base64decode',
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'match', '#(\\\\u003c|\\\\u003e)#i', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'encoded_options',
+), array (
+  0 => 'base64decode',
+)))))));
+$this->rules[265] = wfWAFRule::create($this, 265, NULL, 'xss', '100', 'WAF-RULE-265', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '#(?:nopriv_)?install_online_preset#', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+))))));
+$this->rules[266] = wfWAFRule::create($this, 266, NULL, 'xss', '100', 'WPBakery Page Builder <= 6.2.0 Contributor+ Stored XSS FE Save Post', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'vc_save', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', new wfWAFRuleVariable($this, 'xssRegex', NULL), array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'content',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'content',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'match', '/vc_raw_html|vc_raw_js|custom_onclick_code/', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'content',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'content',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'editor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[267] = wfWAFRule::create($this, 267, NULL, 'obji', '100', 'WAF-RULE-267', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'md5Equals', 'ec16c8b7348b86dd53b25acb753aee01', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '/(^|;|{|})O:+?\\+*[0-9]+:/i', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '93da65a9fd0004d9477aeac024e08e15',
+  2 => 'e8624ec2ca452c9113851208d88c50c6',
+), array (
+))))));
+$this->rules[269] = wfWAFRule::create($this, 269, NULL, 'xss', '100', 'WAF-RULE-269', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '/wp-json[\\/]+wp[\\/]+V2[\\/]+posts/i', array(wfWAFRuleComparisonSubject::create($this, 'request.path', array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'match', '/wp[\\/]+V2[\\/]+posts/i', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'c98d48a702d2fb75df0353af9c222655',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => 'c98d48a702d2fb75df0353af9c222655',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '/vc_raw_html|vc_raw_js|custom_onclick_code/', array(wfWAFRuleComparisonSubject::create($this, 'request.rawBody', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'editor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[270] = wfWAFRule::create($this, 270, NULL, 'xss', '100', 'WAF-RULE-270', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'md5Equals', '1a45e1a86c5a26edea803aec8a5413e4', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '/vc_raw_html|vc_raw_js|custom_onclick_code/', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '66f6181bcb4cff4cd38fbc804a036db6',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '66f6181bcb4cff4cd38fbc804a036db6',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'editor', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[271] = wfWAFRule::create($this, 271, NULL, 'file_upload', '100', 'Quiz and Survey Master <= 7.0.0 Arbitrary File Deletion and Upload', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '/^\\/(?:\\.\\/)*(?:var|home|usr|mnt|media|etc|tmp|dev|proc)\\/|(^|\\/|\\\\)\\.\\.(\\\\|\\/)/i', array(wfWAFRuleComparisonSubject::create($this, 'request.body', array (
+)),
+wfWAFRuleComparisonSubject::create($this, 'request.queryString', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'qsm_remove_file_fd_question', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+))))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '/\\.(p(h(p|tml)[0-9]?|l|y)|(j|a)sp|aspx|sh|shtml|html?|cgi|htaccess|user\\.ini)($|\\.)/i', array(wfWAFRuleComparisonSubject::create($this, 'request.fileNames', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'qsm_upload_image_fd_question', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)))))));
+$this->rules[273] = wfWAFRule::create($this, 273, NULL, 'bypass', '100', 'WAF-RULE-273', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'md5Equals', '0954ba238528b4dfd6d3429503d78665', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'md5Equals', '6e52833ee0bc5c75d39bb250476ca9ca', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '7137865cd4a6ea47dd8aba4ad72c383c', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '71ed7394b4352d1d35c3e1223351255c', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '378aac690ffb45a76da4bacd96fed995', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '6c8f4fd4ef35605e93f805c10f3b89e0', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '1155d2b5fe99c1e031982f64bdfeaa4c', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '3ef5aa60dba1ecec10733bd77e49c470', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '8d5c37269a2973c88bb403a1170c6ff2', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => 'f66a000a92856bfcf0ad455aa7742d03',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[274] = wfWAFRule::create($this, 274, NULL, 'xss', '100', 'Discount Rules for WooCommerce < 2.1.0 - Multiple Vulnerabilities', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '#^(?:nopriv_)?wdr_ajax#', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'notEquals', 'get_price_html', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'method',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[275] = wfWAFRule::create($this, 275, NULL, 'xss', '100', 'WAF-RULE-275', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '13542b3f1363243bd8095e4f908688de',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'md5Equals', '63d2f77e69fe5c0db4c5482f2fad9ccf', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '62d20fa9cfe074dad920afd110efccc0', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', 'd3cda9d3d12261c02ffa6b2f57390bfb', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', 'e138c37b679fa33e448ecefb27f173fd', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '715dfc7783556b778f0b38de2c8b4454', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '4124c5d015192d02e28f5020b0222d14', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', 'f03b82fc11720207260f93b90de6314d', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '588d21810a086ab1ae436ef98380d099', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '9dc3768087aedbe8d59e3dfed7f1a7eb', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '71ba5e4ceb3391c8a62b7c8975800241', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', 'ee5f012b2527601cdd395f27d9fcc73f', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+))))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[276] = wfWAFRule::create($this, 276, NULL, 'bypass', '100', 'Kali Forms <= 2.1.1 Unprotected AJAX', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'equals', 'kaliforms_update_option_ajax', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'equals', 'kaliforms_clear_log', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'equals', 'kaliforms_form_delete_uploaded_file', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'equals', 'nopriv_kaliforms_form_delete_uploaded_file', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[278] = wfWAFRule::create($this, 278, NULL, 'rce', '100', 'File Manager < 6.9 Remote Code Execution', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/php/connector.minimal.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+))))));
+$this->rules[279] = wfWAFRule::create($this, 279, NULL, 'auth-bypass', '100', 'NextScripts: Social Networks Auto-Poster < 4.3.18 Authorization Bypass', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'nxs_snap_aj', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[280] = wfWAFRule::create($this, 280, NULL, 'file_upload', '100', 'WAF-RULE-280', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'md5Equals', 'da1d108ca6aac6deb848c7ca0818f31c', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'md5Equals', '9b0685819a0777155dcb7c198057f927', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '9d452b7a6a9c1c57203bfdccb77fc427',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '9d452b7a6a9c1c57203bfdccb77fc427',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', 'e1fc81bf796f48d8c10fc07a84e44cf5', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '9d452b7a6a9c1c57203bfdccb77fc427',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '9d452b7a6a9c1c57203bfdccb77fc427',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', '18d075abab560662e6aa3d0859c14d3d', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '9d452b7a6a9c1c57203bfdccb77fc427',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '9d452b7a6a9c1c57203bfdccb77fc427',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'md5Equals', 'ff8d67ac27d672f7a96d9152001c2297', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '9d452b7a6a9c1c57203bfdccb77fc427',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '9d452b7a6a9c1c57203bfdccb77fc427',
+), array (
+)))))));
+$this->rules[281] = wfWAFRule::create($this, 281, NULL, 'email forgery', '100', 'Email Subscribers & Newsletters <= 4.5.5  Unauthenticated email forgery/spoofing', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'submitted', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'ig_es_broadcast_submitted',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'ig_es_broadcast_submitted',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[282] = wfWAFRule::create($this, 282, NULL, 'xss', '100', 'WAF-RULE-282', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#import_xml_layouts#', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'match', '#import_xml_layouts#', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '48f074fa17f82e80816475181040e35f',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '48f074fa17f82e80816475181040e35f',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[283] = wfWAFRule::create($this, 283, NULL, 'auth-bypass', '100', 'Forminator < 1.13.5 - Unauthenticated Sensitive Data Export', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'equals', 'forminator_export_entries', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[284] = wfWAFRule::create($this, 284, NULL, 'priv-esc', '100', 'WAF-RULE-284', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'md5Equals', '5f773e5ea05f23d7303d5a1d5c6f8661', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5QueryString',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.md5Body',
+  1 => '418c5509e2171d55b0aee5c2ea4442b5',
+), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[285] = wfWAFRule::create($this, 285, NULL, 'rce', '100', 'Function Injection in Multiple Themes using Epsilon Framework <= 1.2.1', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/admin\\-ajax\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#(?:nopriv_)?epsilon_framework_ajax_action#', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'match', '#(?:nopriv_)?welcome_screen_ajax_callback#', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'match', '#(?:nopriv_)?epsilon_dashboard_ajax_callback#', array(wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.body',
+  1 => 'action',
+), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array (
+  0 => 'request.queryString',
+  1 => 'action',
+), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
 ?>

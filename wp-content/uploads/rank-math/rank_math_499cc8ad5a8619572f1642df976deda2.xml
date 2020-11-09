@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//www.thestarsarebright.com/main-sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://www.thestarsarebright.com/</loc>
+		<lastmod>2020-11-02T20:55:41+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.thestarsarebright.com/wp-content/uploads/2020/09/31-Oct-website.jpg</image:loc>
+			<image:caption><![CDATA[The Stars are Bright: Zimbabwe through the eyes of its young painters from Cyrene (1940-1947), 15 July – 30 September 2020, The Theatre Courtyard Green Rooms]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.thestarsarebright.com/wp-content/uploads/2020/09/31-Oct-phone.jpg</image:loc>
+			<image:caption><![CDATA[The Stars are Bright: Zimbabwe through the eyes of its young painters from Cyrene (1940-1947), 15 July – 30 September 2020, The Theatre Courtyard Green Rooms]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.thestarsarebright.com/trailer/</loc>
+		<lastmod>2020-10-22T12:51:28+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.thestarsarebright.com/exhibition/</loc>
+		<lastmod>2020-10-16T10:26:10+00:00</lastmod>
+		<image:image>
+			<image:loc>https://thestarsarebright.com/wp-content/uploads/2020/07/About-the-exhibition.jpg</image:loc>
+			<image:caption><![CDATA[Tree Flowers (1945), painting by William Nyati, Zimbabwean Modern Art, part of The Stars are Bright a free art exhibition in Shoreditch]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.thestarsarebright.com/wp-content/plugins/bb-plugin/img/pixel.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.thestarsarebright.com/footer/</loc>
+		<lastmod>2020-07-20T19:33:51+00:00</lastmod>
+		<image:image>
+			<image:loc>https://thestarsarebright.com/wp-content/uploads/2020/07/Theatre-Courtyard-Green-Rooms-copy.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.thestarsarebright.com/exhibition-credits/</loc>
+		<lastmod>2020-07-20T18:04:22+00:00</lastmod>
+		<image:image>
+			<image:loc>https://thestarsarebright.com/wp-content/uploads/2020/07/Credits-2.jpg</image:loc>
+			<image:caption><![CDATA[Village Horse and Trader with Gun, Zimbabwean Modern Art, part of The Stars are Bright a free art exhibition in Shoreditch]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.thestarsarebright.com/privacy-policy/</loc>
+		<lastmod>2020-07-05T22:48:22+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.thestarsarebright.com/terms/</loc>
+		<lastmod>2020-07-05T22:41:30+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.thestarsarebright.com/cookies-policy/</loc>
+		<lastmod>2020-07-04T14:24:10+00:00</lastmod>
+	</url>
+</urlset>

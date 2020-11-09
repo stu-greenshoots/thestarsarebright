@@ -182,9 +182,13 @@ class Facebook extends OpenGraph {
 	/**
 	 * Outputs the SEO title as OpenGraph title.
 	 *
+	 * @copyright Copyright (C) 2008-2019, Yoast BV
+	 * The following code is a derivative work of the code from the Yoast(https://github.com/Yoast/wordpress-seo/), which is licensed under GPL v3.
+	 *
 	 * @link https://developers.facebook.com/docs/reference/opengraph/object-type/article/
 	 *
 	 * @param bool $echo Whether or not to echo the output.
+	 *
 	 * @return string
 	 */
 	public function title( $echo = true ) {
@@ -213,6 +217,9 @@ class Facebook extends OpenGraph {
 
 	/**
 	 * Outputs the canonical URL as OpenGraph URL, which consolidates likes and shares.
+	 *
+	 * @copyright Copyright (C) 2008-2019, Yoast BV
+	 * The following code is a derivative work of the code from the Yoast(https://github.com/Yoast/wordpress-seo/), which is licensed under GPL v3.
 	 *
 	 * @link https://developers.facebook.com/docs/reference/opengraph/object-type/article/
 	 */
@@ -261,7 +268,7 @@ class Facebook extends OpenGraph {
 	}
 
 	/**
-	 * Create new Image class and get the images to set the og:image.
+	 * Create new Image class and get the images to set the `og:image`.
 	 *
 	 * @param string|bool $image Optional. Image URL.
 	 */
@@ -281,7 +288,7 @@ class Facebook extends OpenGraph {
 	}
 
 	/**
-	 * Output the article tags as article:tag tags.
+	 * Output the article tags as `article:tag` tags.
 	 */
 	public function tags() {
 		$tags = get_the_tags();
@@ -295,7 +302,7 @@ class Facebook extends OpenGraph {
 	}
 
 	/**
-	 * Output the article category as an article:section tag.
+	 * Output the article category as an `article:section` tag.
 	 */
 	public function category() {
 		$terms = get_the_category();
@@ -327,7 +334,7 @@ class Facebook extends OpenGraph {
 	}
 
 	/**
-	 * Output product tags
+	 * Output product tags.
 	 */
 	public function product() {
 		if ( $this->is_product() ) {
@@ -343,7 +350,7 @@ class Facebook extends OpenGraph {
 	}
 
 	/**
-	 * Output local info
+	 * Output local info.
 	 */
 	public function local() {
 		$this->tag( 'og:url', Helper::get_post_meta( 'snippet_local_url' ) );
@@ -358,7 +365,7 @@ class Facebook extends OpenGraph {
 	}
 
 	/**
-	 * Output video tags
+	 * Output video tags.
 	 */
 	public function video() {
 		$this->tag( 'og:video', Helper::get_post_meta( 'snippet_video_url' ) );
@@ -377,12 +384,14 @@ class Facebook extends OpenGraph {
 	private function duration_to_seconds( $iso8601 ) {
 		$interval = new DateInterval( $iso8601 );
 
-		return array_sum([
-			$interval->d * DAY_IN_SECONDS,
-			$interval->h * HOUR_IN_SECONDS,
-			$interval->i * MINUTE_IN_SECONDS,
-			$interval->s,
-		]);
+		return array_sum(
+			[
+				$interval->d * DAY_IN_SECONDS,
+				$interval->h * HOUR_IN_SECONDS,
+				$interval->i * MINUTE_IN_SECONDS,
+				$interval->s,
+			]
+		);
 	}
 
 	/**
@@ -405,7 +414,7 @@ class Facebook extends OpenGraph {
 	}
 
 	/**
-	 * Is woocommerce product
+	 * Is WooCommerce product
 	 *
 	 * @return bool
 	 */

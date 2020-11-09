@@ -22,6 +22,9 @@ defined( 'ABSPATH' ) || exit;
 
 /**
  * Frontend class.
+ *
+ * @copyright Copyright (C) 2008-2019, Yoast BV
+ * The following code is a derivative work of the code from the Yoast(https://github.com/Yoast/wordpress-seo/), which is licensed under GPL v3.
  */
 class Frontend {
 
@@ -31,6 +34,10 @@ class Frontend {
 	 * The Constructor.
 	 */
 	public function __construct() {
+		if ( \MyThemeShop\Helpers\Param::get( 'et_fb' ) ) {
+			return;
+		}
+
 		$this->includes();
 		$this->hooks();
 
@@ -77,6 +84,10 @@ class Frontend {
 		if ( Helper::get_settings( 'titles.disable_author_archives' ) || Helper::get_settings( 'titles.disable_date_archives' ) ) {
 			$this->action( 'wp', 'archive_redirect' );
 		}
+
+		// Add support for shortcode in the Category/Term description.
+		add_filter( 'category_description', 'do_shortcode' );
+		add_filter( 'term_description', 'do_shortcode' );
 	}
 
 	/**
@@ -102,7 +113,7 @@ class Frontend {
 	}
 
 	/**
-	 * Enqueue Styles and Scripts required by plugin.
+	 * Enqueue Styles and Scripts
 	 */
 	public function enqueue() {
 		if ( ! is_admin_bar_showing() || ! Helper::has_cap( 'admin_bar' ) ) {
@@ -214,6 +225,7 @@ class Frontend {
 	public function add_amp_dev_mode_xpaths( $xpaths ) {
 		$xpaths[] = '//script[ contains( text(), "var rankMath" ) ]';
 		$xpaths[] = '//*[ @id = "rank-math-css" ]';
+		$xpaths[] = '//a[starts-with(@href, "tel://")]';
 		return $xpaths;
 	}
 
@@ -247,6 +259,9 @@ class Frontend {
 	/**
 	 * Check if we can add the RSS footer and/or header to the RSS feed item.
 	 *
+	 * @copyright Copyright (C) 2008-2019, Yoast BV
+	 * The following code is a derivative work of the code from the Yoast(https://github.com/Yoast/wordpress-seo/), which is licensed under GPL v3.
+	 *
 	 * @param string $content Feed item content.
 	 * @param string $context Feed item context, either 'excerpt' or 'full'.
 	 *
@@ -267,9 +282,9 @@ class Frontend {
 	}
 
 	/**
-	 * Get rss content for specified location.
+	 * Get RSS content for specified location.
 	 *
-	 * @param string $which Location id.
+	 * @param string $which Location ID.
 	 *
 	 * @return string
 	 */

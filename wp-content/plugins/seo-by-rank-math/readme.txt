@@ -1,15 +1,15 @@
-=== WordPress SEO Plugin - Rank Math ===
+=== Rank Math - SEO Plugin for WordPress ===
 Contributors: rankmath
-Plugin link: https://s.rankmath.com/homepage
+Plugin link: https://rankmath.com/?utm_source=LP&utm_campaign=WP
 Tags: seo, sitemap, google search console, schema, redirection
-Tested up to: 5.4.2
-Requires at least: 4.9.0
-Requires PHP: 5.6
-Stable tag: 1.0.45
+Tested up to: 5.5.3
+Requires at least: 5.2
+Requires PHP: 7.0
+Stable tag: 1.0.51
 License: GPL-2.0+
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
-Rank Math is a revolutionary SEO plugin that combines the features of many SEO tools in a single package & helps you multiply your traffic.
+Rank Math is a revolutionary WordPress SEO plugin that combines the features of many SEO tools in a single package & helps you multiply your traffic.
 
 == Description ==
 
@@ -97,7 +97,7 @@ Even with significantly more features than other plugins, Rank Math loads amazin
 
 * **Super Fast SEO Plugin** — Even after packing so many features, Rank Math has a negligible load on your server, thus making it one of the fastest SEO plugins for WordPress.
 
-* **Automatic Keyword Suggestions from Google ** — Get keyword suggestions from Google as you start typing letters in the focus keyword field of Rank Math.
+* **Automatic Keyword Suggestions from Google** — Get keyword suggestions from Google as you start typing letters in the focus keyword field of Rank Math.
 
 * **New SEO Analyzer** — Rank Math's built-in SEO analysis will give you SEO recommendations that you'd normally spend hundreds of dollars to get.
 
@@ -108,6 +108,8 @@ Even with significantly more features than other plugins, Rank Math loads amazin
 * **Optimize UNLIMITED Keywords At Once** — You can optimize your post for up to 5 different keywords by default with the Rank Math plugin and can use a filter to optimize for unlimited keywords.
 
 * **Image SEO** - With Rank Math's perfect solution to add ALT & Title tags on the fly, to optimize images, showing inside the content, and that too for FREE, there is no reason to choose any other SEO solution that does not provide all the essential SEO features.
+
+* **[Web Stories SEO](https://rankmath.com/kb/google-web-stories/)** - Make any Story created with the Google's Web Stories plugin SEO-Ready. Automatically adds AMP friendly Schema markup and Meta tags.
 
 * **Translation Plugins Support** — Rank Math works flawlessly with the top translations plugins like WPML, TranslatePress, Weglot, Polylang, etc., making it a perfect companion.
 
@@ -473,36 +475,15 @@ Please drop us an email at support@rankmath.com and we would be more than happy 
 
 == Changelog ==
 
-= 1.0.45 [Jul 06, 2020] =
-* Added: [New!] Support for [Google Web Stories](https://rankmath.com/kb/google-web-stories/) by integrating with the Web Stories plugin for WordPress
-* Added: An option to enable/disable update emails in the `Auto Update` option as well as the [ready step of the setup wizard](https://rankmath.com/kb/how-to-setup/#step-6-showing-off-your-optimized-website)
-* Added: [Facebook & Twitter meta fields](https://rankmath.com/kb/meta-box-social-tab/#title) in the [WPML](https://rankmath.com/compatibility/wpml/) config file
-* Added: Some missing text in the [translation](https://translate.wordpress.org/projects/wp-plugins/seo-by-rank-math/) file
-* Added: A [filter](https://rankmath.com/kb/filters-hooks-api-developer/#remove-rank-math-link-class) to remove `rank-math-link` class from the content links on the frontend
-* Added: A dismiss button in the [Auto-post Redirect](https://rankmath.com/kb/general-settings/#auto-post-redirect) notice that was missing accidentally. Sorry about that
-* Improved: Single post editor's performance by removing some unnecessary [Focus Keyword](https://rankmath.com/kb/score-100-in-tests/#first-step-choosing-focus-keywords) related combinations
-* Improved: Validating the [Robots data](https://rankmath.com/kb/advanced-tab/#robots-meta) before using them on the frontend
-* Improved: Hiding the [Attachment Options](https://rankmath.com/kb/titles-and-meta/#media) in the Titles & Meta setting if the ['Redirect Attachments'](https://rankmath.com/kb/general-settings/#redirect-attachments) option is turned on
-* Improved: Set attachments to `noindex` after [importing settings from Yoast](https://rankmath.com/kb/how-to-setup/#step-1-import-data-from-other-plugins) and if the Redirection Attachment option was set to on
-* Improved: Renamed 'Media' tab in the [Sitemap settings](https://rankmath.com/kb/configure-sitemaps/#media) to 'Attachments'
-* Improved: Compatibility with WordPress 4.9 and the users will see a notice in the backend requesting them to update their WordPress to the latest version if someone wants to use the future releases of Rank Math (they might not be compatible)
-* Improved: `Product In Stock` value in the [Product Schema](https://rankmath.com/kb/rich-snippets/#product) shortcode will now show `Available` or `Not Available` instead of a boolean value
-* Improved: Enhanced security in some places in the plugin
-* Replaced: A third-party `useragent` checking API in the [advanced 404 Monitor](https://rankmath.com/kb/monitor-404-errors/#advanced-404-monitor) with a native library
-* Removed: Missing description tag HTML comment notice from the frontend for admins
-* Changed: [Dropdown labels](https://i.rankmath.com/cMn6dc) to filter the post by SEO Scores
-* Changed: [Sitemap](https://rankmath.com/kb/configure-sitemaps/) cache directory from plugin folder to `wp-content/rank-math`
-* Fixed: Few users were not able to connect their [Google Search Console](https://rankmath.com/kb/search-console/) & [Rank Math account](https://rankmath.com/kb/free-account-benefits/)
-* Fixed: The status of [Elementor's](https://rankmath.com/blog/elementor-seo/) update button was not updating in some cases which were causing confusion
-* Fixed: An issue where the AMP plugin by Google was throwing errors for admin-related scripts. Even though it was working fine on the frontend
-* Fixed: Block Styling was not loading in the backend with the Gutenberg v8.4+ Plugin
-* Fixed: An issue where using a spacebar while adding a meta description was throwing the cursor to the end of the description entered
-* Fixed: Compatibility with the Duplicate Post plugin
-* Fixed: Getting an invalid argument supplied error in `class-cmb2.php` file on some installations
-* Fixed: Russian focus keywords were not getting detected in the URL in Rank Math's tests
-* Fixed: An error was generating in the backend when the post thumbnail image was removed from the media folder
-* Fixed: In some cases, `invalid` was getting added to the Focus Keyword field after updating the post
-* Fixed: Guided [Recipe Schema](https://rankmath.com/kb/rich-snippets/#recipe) was throwing an invalid value in the field `itemtype` when a `HowtoSection` value was added
-* Fixed: A PHP warning for `missing constant` if WordPress version requirement was not met
+= 1.0.51 [Nov 02, 2020] =
+* Improved: Dashboard widget completely revamped. Better stats are shown in the Rank Math widget ([https://i.rankmath.com/ZwPDM6](https://i.rankmath.com/ZwPDM6))
+* Improved: Responsiveness of the Analytics pages. Now you can check your website stats on the mobile devices
+* Improved: Replaced all the `textarea` fields in the Schema templates with the `input` field
+* Improved: Changed 'Open Days' field from `multiselect` to `checkbox` in the Restaurant Schema to improve the usability
+* Fixed: Default Article Schema type was not added in the old posts on some installations
+* Updated: Improved the comments on the files where the code was adapted from Yoast, as suggested by Joost de Valk
+* Fixed: `rank_math_rich_snippet` Shortcode was not working with all the Schema types
+* Fixed: Missing Logo Field error on the AMP pages when the Local SEO Module was disabled
+* Fixed: Styling issues related to Gutenberg v9.2.2
 
 Full changelog can be found here - **[Rank Math SEO changelog](https://rankmath.com/changelog/?utm_source=LP&utm_campaign=WP)**
